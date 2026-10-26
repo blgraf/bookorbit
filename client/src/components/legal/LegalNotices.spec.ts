@@ -40,7 +40,7 @@ describe('LegalNotices', () => {
     const links = wrapper.findAll('a')
     expect(links.map((link) => link.attributes('href'))).toEqual([
       'https://github.com/bookorbit/bookorbit',
-      'https://github.com/bookorbit/bookorbit',
+      'https://github.com/blgraf/bookorbit/tree/feat/goodreads-pagebound-sync',
       'https://github.com/bookorbit/bookorbit/blob/main/LICENSE',
       'https://github.com/bookorbit/bookorbit/blob/main/ADDITIONAL_TERMS.md',
     ])

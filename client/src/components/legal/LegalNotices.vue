@@ -7,6 +7,7 @@ import { useLegalNotices } from './useLegalNotices'
 const { t } = useI18n()
 const { open, closeLegalNotices, handleOpenChange } = useLegalNotices()
 
+const MODIFIED_SOURCE_URL = 'https://github.com/blgraf/bookorbit/tree/feat/goodreads-pagebound-sync'
 const PROJECT_URL = 'https://github.com/bookorbit/bookorbit'
 const LICENSE_URL = `${PROJECT_URL}/blob/main/LICENSE`
 const ADDITIONAL_TERMS_URL = `${PROJECT_URL}/blob/main/ADDITIONAL_TERMS.md`
@@ -57,10 +58,11 @@ const ADDITIONAL_TERMS_URL = `${PROJECT_URL}/blob/main/ADDITIONAL_TERMS.md`
           </div>
 
           <p class="text-foreground">{{ t('components.legalNotices.licenseSummary') }}</p>
+          <p class="font-medium text-foreground">{{ t('readingProviders.modifiedNotice') }}</p>
 
           <div class="grid gap-2 sm:grid-cols-3">
             <a
-              :href="PROJECT_URL"
+              :href="MODIFIED_SOURCE_URL"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-1.5 rounded-md border border-border px-3 py-2 font-medium text-foreground outline-hidden hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring"

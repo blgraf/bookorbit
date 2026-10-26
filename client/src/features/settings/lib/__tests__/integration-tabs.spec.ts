@@ -3,8 +3,8 @@ import { Permission } from '@bookorbit/types'
 import { INTEGRATION_TAB_INFO, INTEGRATION_TABS, normalizeIntegrationTab } from '../integration-tabs'
 
 describe('integration-tabs', () => {
-  it('contains Hardcover, Readwise, and StoryGraph', () => {
-    expect(INTEGRATION_TABS).toEqual(['hardcover', 'readwise', 'storygraph'])
+  it('contains all supported integrations', () => {
+    expect(INTEGRATION_TABS).toEqual(['hardcover', 'readwise', 'storygraph', 'pagebound', 'goodreads'])
   })
 
   it('associates each tab with its sync permission', () => {

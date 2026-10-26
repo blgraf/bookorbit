@@ -44,6 +44,8 @@ describe('permission-presets', () => {
       Permission.KoreaderSync,
       Permission.HardcoverSync,
       Permission.ReadwiseSync,
+      Permission.GoodreadsSync,
+      Permission.PageboundSync,
       Permission.StorygraphSync,
       Permission.OpdsAccess,
     ])

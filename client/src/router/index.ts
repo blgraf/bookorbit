@@ -104,6 +104,8 @@ const SYSTEM_ROUTES: Record<SystemTab, string> = {
 }
 
 const INTEGRATION_ROUTES: Record<IntegrationTab, string> = {
+  pagebound: 'settings-pagebound',
+  goodreads: 'settings-goodreads',
   hardcover: 'settings-hardcover',
   readwise: 'settings-readwise',
   storygraph: 'settings-storygraph',
@@ -466,6 +468,20 @@ export const routes: RouteRecordRaw[] = [
             component: () => import('@/features/readwise/components/ReadwiseSettings.vue'),
             props: { embedded: true },
             meta: { maxWidth: 'max-w-3xl', title: () => t('settings.integrations.tabs.readwise') },
+          },
+          {
+            path: 'pagebound',
+            name: 'settings-pagebound',
+            component: () => import('@/features/reading-provider/components/ReadingProviderSettings.vue'),
+            props: { provider: 'pagebound', embedded: true },
+            meta: { maxWidth: 'max-w-3xl', title: () => t('settings.integrations.tabs.pagebound') },
+          },
+          {
+            path: 'goodreads',
+            name: 'settings-goodreads',
+            component: () => import('@/features/reading-provider/components/ReadingProviderSettings.vue'),
+            props: { provider: 'goodreads', embedded: true },
+            meta: { maxWidth: 'max-w-3xl', title: () => t('settings.integrations.tabs.goodreads') },
           },
           {
             path: 'storygraph',

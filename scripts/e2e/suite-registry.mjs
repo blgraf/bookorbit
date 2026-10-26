@@ -16,6 +16,26 @@ const SHARED_AUTH_TYPE_PATHS = Object.freeze(["packages/types/src/auth.ts", "pac
 const SHARED_TYPES_PATHS = Object.freeze(["packages/types/src/**"]);
 
 export const E2E_SUITES = Object.freeze({
+  "reading-provider": {
+    id: "reading-provider",
+    name: "Goodreads and Pagebound Sync",
+    timeout: 30,
+    lane: "full",
+    description: "Reading provider authorization, encrypted connections, persistent queue leases, exclusions, and outbound verification",
+    vitestTarget: "test/reading-provider.e2e-spec.ts",
+    junitOutput: `${TEST_RESULTS_DIR}/reading-provider-e2e-junit.xml`,
+    prepareDedicatedDatabase: true,
+    useDedicatedDatabase: true,
+    changedPaths: [
+      "server/src/modules/reading-provider/**",
+      "server/src/modules/pagebound/**",
+      "server/src/modules/goodreads/**",
+      "server/src/db/schema/reading-provider.ts",
+      "packages/types/src/reading-provider.ts",
+      "server/test/reading-provider.e2e-spec.ts",
+      ...SHARED_DB_AND_HELPER_PATHS,
+    ],
+  },
   "djvu-reader": {
     id: "djvu-reader",
     name: "DjVuLibre Reader",

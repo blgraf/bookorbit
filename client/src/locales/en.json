@@ -1742,7 +1742,9 @@
       "tabs": {
         "hardcover": "Hardcover",
         "readwise": "Readwise",
-        "storygraph": "StoryGraph"
+        "storygraph": "StoryGraph",
+        "pagebound": "Pagebound",
+        "goodreads": "Goodreads"
       },
       "providerSubtitles": {
         "readwise": "Send your highlights to Readwise automatically.",
@@ -14205,5 +14207,50 @@
       "tab": "tab"
     },
     "resultCount": "{count, plural, =0 {No results} one {# result} other {# results}}"
+  },
+  "readingProviders": {
+    "subtitle": "Sync your reading from BookOrbit",
+    "connection": "Connect {provider}",
+    "outboundHelp": "One-way outbound synchronization. BookOrbit never imports or replaces your remote reading history.",
+    "encryptionRequired": "An administrator must configure READING_PROVIDER_ENCRYPTION_KEY before accounts can be connected.",
+    "reconnect": "Your provider session needs attention. Reconnect to resume synchronization.",
+    "connected": "Connected account: {account}",
+    "email": "Email",
+    "password": "Password",
+    "passwordHelp": "Your password is used for sign-in only. BookOrbit stores encrypted renewable tokens, not your password.",
+    "cookies": "Goodreads browser session cookies",
+    "cookieHelp": "Sign in to Goodreads in your browser. In developer tools, open Network, select a request to www.goodreads.com, and copy the Cookie request-header value. Paste only that single line here. Cookies grant account access; keep them private. Complete any CAPTCHA in your browser. BookOrbit cannot refresh browser cookies automatically.",
+    "connect": "Connect",
+    "reconnectButton": "Replace credentials",
+    "validate": "Validate connection",
+    "disconnect": "Disconnect",
+    "enable": "Enable {provider} synchronization",
+    "scopeHelp": "All eligible books participate after you enable this provider. Exclude individual books in their details. Unsupported statuses are preserved without remote changes.",
+    "bulkHelp": "Enabling synchronization affects future reading changes only. Use Sync all explicitly to process your existing library. Existing remote progress and reading history take priority whenever a safe update cannot be established.",
+    "syncAll": "Sync all eligible books",
+    "cancel": "Cancel pending synchronization",
+    "summary": "{pending} pending · {failed} failed · {synced} previously synchronized",
+    "scanning": "Adding eligible books to the queue…",
+    "lastSync": "Last successful sync: {date}",
+    "limitations": "Provider limitations",
+    "linkedBooks": "Linked books and sync errors",
+    "noBooks": "No books have been queued yet. Sync an individual book from its details, or start a bulk sync.",
+    "previous": "Previous page",
+    "next": "Next page",
+    "bookSync": "{provider} sync",
+    "includeBook": "Include this book in {provider} synchronization",
+    "excluded": "Excluded",
+    "included": "Included",
+    "queued": "Queued",
+    "syncNow": "Sync now",
+    "manageLink": "Manage book link",
+    "openEdition": "Open linked edition",
+    "matchHelp": "Select the exact edition. Ambiguous matches are never accepted automatically. Changing the link clears the old sync baseline and does not immediately write remote data.",
+    "searchLabel": "Title and author",
+    "search": "Search",
+    "pages": "{count} pages",
+    "editionId": "{provider} edition ID (numeric Goodreads ID or Pagebound UUID)",
+    "linkEdition": "Save edition link",
+    "modifiedNotice": "This is a modified version of BookOrbit and is not an official BookOrbit release. Goodreads/Pagebound changes: 26 October 2026."
   }
 }

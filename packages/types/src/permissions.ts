@@ -19,6 +19,8 @@ export enum Permission {
   HardcoverSync = "hardcover_sync",
   ReadwiseSync = "readwise_sync",
   StorygraphSync = "storygraph_sync",
+  GoodreadsSync = "goodreads_sync",
+  PageboundSync = "pagebound_sync",
   OpdsAccess = "opds_access",
 
   // Email
@@ -60,6 +62,8 @@ export const PERMISSION_LABELS: Record<Permission, string> = {
   [Permission.HardcoverSync]: "Hardcover sync",
   [Permission.ReadwiseSync]: "Readwise sync",
   [Permission.StorygraphSync]: "StoryGraph sync",
+  [Permission.GoodreadsSync]: "Goodreads sync",
+  [Permission.PageboundSync]: "Pagebound sync",
   [Permission.OpdsAccess]: "OPDS access",
   [Permission.EmailSend]: "Send by email",
   [Permission.ManageEmail]: "Manage email",

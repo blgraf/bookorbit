@@ -39,7 +39,7 @@ export const PERMISSION_GROUPS: PermissionGroup[] = [
   },
   {
     id: 'readingIntegrations',
-    use: [Permission.HardcoverSync, Permission.ReadwiseSync, Permission.StorygraphSync],
+    use: [Permission.HardcoverSync, Permission.ReadwiseSync, Permission.GoodreadsSync, Permission.PageboundSync, Permission.StorygraphSync],
     manage: [],
   },
   {
@@ -94,6 +94,8 @@ const STANDARD_PRESET: Permission[] = [
   Permission.KoreaderSync,
   Permission.HardcoverSync,
   Permission.ReadwiseSync,
+  Permission.GoodreadsSync,
+  Permission.PageboundSync,
   Permission.StorygraphSync,
   Permission.OpdsAccess,
 ]

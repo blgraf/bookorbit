@@ -117,3 +117,7 @@ function parseBooleanFlag(value: string | undefined, fallback: boolean): boolean
   if (['false', '0', 'no', 'off'].includes(normalized)) return false;
   return fallback;
 }
+
+export const readingProviderConfig = registerAs('readingProvider', () => ({
+  encryptionKey: process.env.READING_PROVIDER_ENCRYPTION_KEY ?? '',
+}));

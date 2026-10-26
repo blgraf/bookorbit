@@ -100,6 +100,10 @@ const envSchema = z.object({
   CLIENT_URL: z.string().url().optional(),
   APP_URL: z.string().url().default(DEV_CLIENT_ORIGIN),
   TRUST_PROXY: trustProxyEnv(),
+  READING_PROVIDER_ENCRYPTION_KEY: z
+    .string()
+    .regex(/^[a-f0-9]{64}$/i)
+    .optional(),
   EMAIL_ENCRYPTION_KEY: z.string().optional(),
   MIGRATION_ENCRYPTION_KEY: z.string().optional(),
   BOOK_REQUEST_ENCRYPTION_KEY: z.string().optional(),

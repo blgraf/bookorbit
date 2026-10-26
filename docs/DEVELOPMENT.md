@@ -549,3 +549,7 @@ All commands are run from the repository root unless noted otherwise.
 | `pnpm run typecheck`     | TypeScript type checking                     |
 | `pnpm run format`        | Prettier format (server + client)            |
 | `pnpm run format:check`  | Prettier check without writing               |
+
+## Goodreads and Pagebound sync
+
+See [READING_PROVIDER_SYNC.md](READING_PROVIDER_SYNC.md) for encrypted connection setup, provider limitations, tests, and the live-account verification checklist.

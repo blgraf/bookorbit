@@ -7,6 +7,7 @@ import { LoggerModule } from 'nestjs-pino';
 
 import {
   appConfig,
+  readingProviderConfig,
   audiolessEpubConfig,
   authConfig,
   bookRequestConfig,
@@ -83,6 +84,7 @@ import { ReleaseNotesModule } from './modules/release-notes/release-notes.module
 import { AchievementModule } from './modules/achievement/achievement.module';
 import { HardcoverModule } from './modules/hardcover/hardcover.module';
 import { ReadwiseModule } from './modules/readwise/readwise.module';
+import { ReadingProviderModule } from './modules/reading-provider/reading-provider.module';
 import { StorygraphModule } from './modules/storygraph/storygraph.module';
 import { CustomMetadataModule } from './modules/custom-metadata/custom-metadata.module';
 import { CustomIconModule } from './modules/custom-icon/custom-icon.module';
@@ -105,6 +107,7 @@ import { PodcastModule } from './modules/podcast/podcast.module';
       validate: validateEnv,
       load: [
         appConfig,
+        readingProviderConfig,
         dbConfig,
         authConfig,
         storageConfig,
@@ -192,6 +195,7 @@ import { PodcastModule } from './modules/podcast/podcast.module';
     HardcoverModule,
     ReadwiseModule,
     StorygraphModule,
+    ReadingProviderModule,
     AccountActivityModule,
     SharedReadingInsightsModule,
     BookDuplicatesModule,

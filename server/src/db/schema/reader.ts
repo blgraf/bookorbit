@@ -46,6 +46,7 @@ export const userBookStatus = pgTable(
   (t) => [
     primaryKey({ columns: [t.userId, t.bookId] }),
     index('ubs_user_id_idx').on(t.userId),
+    index('ubs_user_updated_book_idx').on(t.userId, t.updatedAt, t.bookId),
     index('ubs_user_status_idx').on(t.userId, t.status),
     index('ubs_book_user_idx').on(t.bookId, t.userId),
     check(

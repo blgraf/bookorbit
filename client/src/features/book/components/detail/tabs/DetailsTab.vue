@@ -66,6 +66,7 @@ import { formatCommunityRatingValue } from '@/features/book/lib/community-rating
 import BookCoverSurface from '@/features/book/components/BookCoverSurface.vue'
 import { useDisplaySettings } from '@/composables/useDisplaySettings'
 import HardcoverBookSyncGridItem from '@/features/hardcover/components/HardcoverBookSyncGridItem.vue'
+import ReadingProviderBookControls from '@/features/reading-provider/components/ReadingProviderBookControls.vue'
 import StorygraphBookSyncGridItem from '@/features/storygraph/components/StorygraphBookSyncGridItem.vue'
 import BookEditionsCard, { type EditionProgress } from '@/features/book/components/detail/details/BookEditionsCard.vue'
 import BookReadingActivityCard from '@/features/book/components/detail/details/BookReadingActivityCard.vue'
@@ -2085,6 +2086,8 @@ watch(
           </div>
           <HardcoverBookSyncGridItem :book-id="book.id" />
           <StorygraphBookSyncGridItem :book-id="book.id" />
+          <ReadingProviderBookControls provider="pagebound" :book-id="book.id" />
+          <ReadingProviderBookControls provider="goodreads" :book-id="book.id" />
           <div class="flex items-baseline justify-between gap-3 border-b border-border py-[6px] last:border-b-0">
             <dt class="shrink-0 text-[11px] font-medium text-muted-foreground">{{ t('book.detail.details.dateStarted') }}</dt>
             <template v-if="isEditingReadingDate('startedAt')">
